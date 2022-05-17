@@ -1,0 +1,33 @@
+.plus{
+    height: 2rem;
+    width: 2rem;
+}
+
+.row {
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+
+input{
+    font-size: 1.5rem;
+    /* height: 2rem;
+    width: 4rem; */
+    /* padding:10px; */
+    border:0;
+    /* box-shadow:0 0 15px 4px rgba(0,0,0,0.06); */
+}
+
+input:focus{
+    outline: none;
+}
+
+.name{
+    width: 50%;
+}
+
+.number{
+    width: 25%;
+}
