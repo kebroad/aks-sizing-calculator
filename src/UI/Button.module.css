@@ -1,11 +1,12 @@
-.button{
- border: none;
- background-color: transparent;
- margin: none;
- padding: 0%;
+.button {
+  border: none;
+  background-color: transparent;
+  margin: none;
+  padding: 0%;
 }
 
 .button:hover,
-.button:active{
-    color: darkgray
+.button:active {
+  color: darkgray;
+  stroke: darkgray;
 }

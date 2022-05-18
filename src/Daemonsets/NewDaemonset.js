@@ -4,6 +4,7 @@ import DashedCard from "../UI/DashedCard";
 import { FiPlusSquare } from "react-icons/fi";
 import classes from "./NewDaemonset.module.css";
 import Button from "../UI/Button";
+
 const NewDaemonset = (props) => {
   const [name, setName] = useState();
   const onChangeName = (e) => {
@@ -27,6 +28,10 @@ const NewDaemonset = (props) => {
             onChange={onChangeName}
             value={name}
           ></input>
+          <select id="cars" name="cars">
+            <option value="system">system</option>
+            <option value="user">user</option>
+          </select>
           <Button className={classes.button}>
             <FiPlusSquare className={classes.plus}></FiPlusSquare>
           </Button>

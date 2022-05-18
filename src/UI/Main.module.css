@@ -1,6 +1,6 @@
 .main {
-    margin-top: 6rem;
-    position: absolute;
-    width: 100%;
-    overflow: scroll;
+  margin-top: 6rem;
+  width: 70%;
+  height: calc(100vh - 6rem);
+  overflow: scroll;
 }

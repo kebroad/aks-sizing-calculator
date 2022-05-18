@@ -1,0 +1,25 @@
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.download {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.downloadcard {
+  background-color: #9466c2; 
+}
+
+.downloadicon {
+  width: 2rem;
+  height: 2rem;
+  margin: 4px;
+}

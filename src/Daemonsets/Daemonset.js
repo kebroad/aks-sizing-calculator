@@ -12,6 +12,7 @@ const Daemonset = (props) => {
       <Card>
         <div className={classes.row}>
           <h2 className={classes.name}>{props.item.name}</h2>
+          <h2 className={classes.type}>{props.item.type}</h2>
           <Button className={classes.button} onClick={onClickHandler}>
             <FiMinusSquare className={classes.minus}></FiMinusSquare>
           </Button>

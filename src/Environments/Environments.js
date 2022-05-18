@@ -7,6 +7,7 @@ const Environments = (props) => {
   const environments = props.environments.map((item) => {
     return (
       <Environment
+        key={item.id}
         item={item}
         onClick={props.removeEnvironmentHandler}
       ></Environment>

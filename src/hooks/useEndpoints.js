@@ -3,11 +3,35 @@ import { useState } from "react";
 const useEndpoints = (
   initialDeployments,
   initialDaemonsets,
-  initialEnvironments
+  initialEnvironments,
+  initialKvIntegration,
+  initialPrivateCluster,
+  initialOsmEnabled,
+  initialContainerInsightsEnabled,
+  initialIngressEndpoints,
+  initialSystemPodsPerNode,
+  initialUserPodsPerNode
 ) => {
   const [deployments, setDeployments] = useState(initialDeployments);
   const [daemonsets, setDaemonsets] = useState(initialDaemonsets);
   const [environments, setEnvironments] = useState(initialEnvironments);
+
+  const [kvIntegration, setKvIntegration] = useState(initialKvIntegration);
+  const [privateCluster, setPrivateCluster] = useState(initialPrivateCluster);
+  const [osmEnabled, setOsmEnabled] = useState(initialOsmEnabled);
+  const [containerInsightsEnabled, setContainerInsightsEnabled] = useState(
+    initialContainerInsightsEnabled
+  );
+  const [ingressEndpoints, setIngressEndpoints] = useState(
+    initialIngressEndpoints
+  );
+  const [systemPodsPerNode, setSystemPodsPerNode] = useState(
+    initialSystemPodsPerNode
+  );
+  const [userPodsPerNode, setUserPodsPerNode] = useState(
+    initialUserPodsPerNode
+  );
+
   const addDeploymentHandler = (deployment) => {
     setDeployments((deployments) => {
       const newDeployment = {
@@ -68,16 +92,60 @@ const useEndpoints = (
     });
   };
 
+  const kvIntegrationToggle = () => {
+    setKvIntegration((kvIntegration) => !kvIntegration);
+  };
+
+  const privateClusterToggle = () => {
+    setPrivateCluster((privateCluster) => !privateCluster);
+  };
+
+  const osmEnabledToggle = () => {
+    setOsmEnabled((osmEnabled) => !osmEnabled);
+  };
+
+  const containerInsightsEnabledToggle = () => {
+    setContainerInsightsEnabled(
+      (containerInsightsEnabled) => !containerInsightsEnabled
+    );
+  };
+
+  const onChangeIngressEndpoints = (value) => {
+    setIngressEndpoints(value);
+  };
+
+  const onChangeSystemPodsPerNode = (value) => {
+    setSystemPodsPerNode(value);
+  };
+
+  const onChangeUserPodsPerNode = (value) => {
+    setUserPodsPerNode(value);
+  };
+
   return {
     deployments,
     daemonsets,
     environments,
+    kvIntegration,
+    privateCluster,
+    osmEnabled,
+    containerInsightsEnabled,
+    ingressEndpoints,
+    systemPodsPerNode,
+    userPodsPerNode,
     addDeploymentHandler,
     removeDeploymentHandler,
     addDaemonsetHandler,
     removeDaemonsetHandler,
     addEnvironmentHandler,
     removeEnvironmentHandler,
+    kvIntegrationToggle,
+    privateClusterToggle,
+    osmEnabledToggle,
+    containerInsightsEnabledToggle,
+    onChangeIngressEndpoints,
+    onChangeSystemPodsPerNode,
+    onChangeUserPodsPerNode,
   };
 };
 

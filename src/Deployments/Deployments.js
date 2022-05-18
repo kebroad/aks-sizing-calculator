@@ -8,6 +8,7 @@ const Deployments = (props) => {
   const deployments = props.deployments.map((item) => {
     return (
       <Deployment
+        key={item.id}
         onClick={props.removeDeploymentHandler}
         item={item}
       ></Deployment>

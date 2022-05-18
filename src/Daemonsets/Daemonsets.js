@@ -6,7 +6,11 @@ import NewDaemonsets from "./NewDaemonset";
 const Daemonsets = (props) => {
   const daemonsets = props.daemonsets.map((item) => {
     return (
-      <Daemonset onClick={props.removeDaemonsetHandler} item={item}></Daemonset>
+      <Daemonset
+        key={item.id}
+        onClick={props.removeDaemonsetHandler}
+        item={item}
+      ></Daemonset>
     );
   });
   return (
