@@ -1,6 +1,6 @@
 import React from 'react'
 import Card from '../UI/Card'
-import classes from "./Deployment.module.css"
+import classes from "./Daemonset.module.css"
 import { FiMinusSquare } from 'react-icons/fi';
 import Button from '../UI/Button';
 const Daemonset = (props) => {
@@ -9,7 +9,7 @@ const Daemonset = (props) => {
             <Card>
                 <div className={classes.row}>
                     <h2 className={classes.name}>{props.name}</h2>
-                    <Button>
+                    <Button className={classes.button}>
                     <FiMinusSquare className={classes.minus}></FiMinusSquare>
                     </Button>
 

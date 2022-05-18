@@ -1,26 +1,27 @@
-.li{
-    list-style-type: none;
+.li {
+  list-style-type: none;
 }
 
 .row {
-    margin: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center
+  margin: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-h2{
-    font-size: 1.5rem;
+h2 {
+  font-size: 1.5rem;
+  margin: 0px;
 }
 
 .minus {
-    height: 2rem;
-    width: 2rem;
+  height: 2rem;
+  width: 2rem;
 }
 
-.name{
-    width: 25rem;
+.button {
+  width: 5%;
 }
 
-.number{
-    width: 7rem;
+.name {
+  width: 95%;
 }

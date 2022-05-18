@@ -2,4 +2,5 @@
     margin-top: 6rem;
     position: absolute;
     width: 100%;
+    overflow: scroll;
 }

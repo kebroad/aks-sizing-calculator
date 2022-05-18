@@ -1,26 +1,27 @@
 import React from 'react'
 import Section from '../UI/Section'
-import Daemonsets from './Daemonset'
-import classes from "./Deployments.module.css"
-import NewDaemonsets from './NewDaemonsets'
+import Daemonset from './Daemonset'
+import classes from "./Daemonsets.module.css"
+import NewDaemonsets from './NewDaemonset'
 const Daemonsets = (props) => {
     const items = [
         {
-          name: "splunk",
-          replicas: "3"
+          name: "kube-proxy",
         },
         {
-          name: "twistlock",
-          replicas: "2"
+          name: "azure-ip-masq-agent",
+        },
+        {
+          name: "azure-cni-networkmonitor",
         }
       ]
     const daemonsets = items.map((item) => { 
-        return <Daemonset name={item.name} replicas={item.replicas}></Daemonset>
+        return <Daemonset name={item.name}></Daemonset>
     })
     return (
         <Section title="Daemonsets" className={classes.section}>
             <ul>
-                {deployments}
+                {daemonsets}
             </ul>
             <NewDaemonsets></NewDaemonsets>
         </Section>

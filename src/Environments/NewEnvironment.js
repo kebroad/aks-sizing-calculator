@@ -2,9 +2,9 @@ import React from 'react'
 import Card from '../UI/Card'
 import DashedCard from '../UI/DashedCard'
 import { FiPlusSquare } from 'react-icons/fi';
-import classes from "./NewDaemonset.module.css"
+import classes from "./NewEnvironment.module.css"
 import Button from '../UI/Button';
-const NewDaemonset = () => {
+const NewEnvironment = () => {
     return (                
         <DashedCard>
             <form>
@@ -20,4 +20,4 @@ const NewDaemonset = () => {
     )
 }
 
-export default NewDaemonset
+export default NewEnvironment
