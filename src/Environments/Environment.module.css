@@ -1,27 +1,30 @@
-.li{
-    list-style-type: none;
+.li {
+  list-style-type: none;
 }
 
 .row {
-    margin: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center
+  margin: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-h2{
-    font-size: 1.5rem;
+h2 {
+  font-size: 1.5rem;
 }
 
 .minus {
-    height: 2rem;
-    width: 2rem;
+  height: 2rem;
+  width: 2rem;
 }
 
 .button {
-    width: 5%
+  width: 5%;
 }
 
-.name{
-    width: 50%
+.replicas {
+  width: 25%;
 }
 
+.name {
+  width: 50%;
+}

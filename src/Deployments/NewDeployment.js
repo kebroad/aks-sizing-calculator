@@ -7,24 +7,36 @@ import Button from "../UI/Button";
 const NewDeployment = (props) => {
   const [name, setName] = useState();
   const [replicas, setReplicas] = useState();
-  const onChangeName = () => {
-      
-  }
-  const submitHandler = (item) => {};
+  const onChangeName = (e) => {
+    setName(e.target.value);
+  };
+  const onChangeReplicas = (e) => {
+    setReplicas(e.target.value);
+  };
+  const submitHandler = (e) => {
+    e.preventDefault();
+    props.onClick({ name: name, replicas: replicas });
+    setName("");
+    setReplicas("");
+  };
 
   return (
     <DashedCard>
-      <form>
+      <form onSubmit={submitHandler}>
         <div className={classes.row}>
           <label hidden>name</label>
           <input
+            value={name}
             className={classes.name}
+            onChange={onChangeName}
             placeholder="name"
             type="text"
             name="name"
           ></input>
           <label hidden>name</label>
           <input
+            value={replicas}
+            onChange={onChangeReplicas}
             className={classes.number}
             placeholder="replicas"
             type="number"
