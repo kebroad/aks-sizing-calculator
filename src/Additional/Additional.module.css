@@ -24,6 +24,11 @@
   flex-direction: row;
 }
 
+.input:hover,
+.input:active {
+  background-color: darkgray;
+}
+
 .input {
   width: 15%;
   text-align: center;

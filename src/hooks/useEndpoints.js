@@ -32,10 +32,13 @@ const useEndpoints = (
     initialUserPodsPerNode
   );
 
-  const environmentMultiplier = environments.reduce(
-    (total, environment) => total + environment.replicas,
-    0
-  );
+  const environmentMultiplier =
+    environments.length === 0
+      ? 1
+      : environments.reduce(
+          (total, environment) => total + environment.replicas,
+          0
+        );
   const totalUserDeploymentIps = deployments.reduce((total, deployment) => {
     return deployment.type === "user"
       ? total + environmentMultiplier * deployment.replicas
@@ -269,14 +272,14 @@ const useEndpoints = (
   const exportCSV = () => {
     let data = [];
     // Remove Ids from the CSV
-    const deploymentsWithoutIds = deployments.map((item) => {
-      delete item.id;
-      return item;
-    });
+    const deploymentsWithoutIds = deployments.map(
+      ({ id, ...keepAttrs }) => keepAttrs
+    );
     const deploymentTitle = ["Deployments:"];
     data.push(deploymentTitle);
 
-    const deploymentFields = Object.keys(deploymentsWithoutIds[0]);
+    const deploymentFields =
+      deployments.length === 0 ? [""] : Object.keys(deploymentsWithoutIds[0]);
     data.push(deploymentFields);
     const deploymentValues = deploymentsWithoutIds.reduce(
       (list, deploymentItem) => {
@@ -289,13 +292,13 @@ const useEndpoints = (
 
     // Daemonsets
     data.push([""]);
-    const daemonsetsWithoutIds = daemonsets.map((item) => {
-      delete item.id;
-      return item;
-    });
+    const daemonsetsWithoutIds = daemonsets.map(
+      ({ id, ...keepAttrs }) => keepAttrs
+    );
     const daemonsetTitle = ["Daemonsets:"];
     data.push(daemonsetTitle);
-    const daemonsetFields = Object.keys(daemonsetsWithoutIds[0]);
+    const daemonsetFields =
+      daemonsets.length === 0 ? [""] : Object.keys(daemonsetsWithoutIds[0]);
     data.push(daemonsetFields);
     const daemonsetValues = daemonsetsWithoutIds.reduce(
       (list, daemonsetItem) => {
@@ -308,13 +311,13 @@ const useEndpoints = (
 
     // Environments
     data.push([""]);
-    const environmentsWithoutIds = environments.map((item) => {
-      delete item.id;
-      return item;
-    });
+    const environmentsWithoutIds = environments.map(
+      ({ id, ...keepAttrs }) => keepAttrs
+    );
     const environmentTitle = ["Environments:"];
     data.push(environmentTitle);
-    const environmentFields = Object.keys(environmentsWithoutIds[0]);
+    const environmentFields =
+      environments.length === 0 ? [""] : Object.keys(environmentsWithoutIds[0]);
     data.push(environmentFields);
     const environmentValues = environmentsWithoutIds.reduce(
       (list, environmentItem) => {
@@ -369,6 +372,7 @@ const useEndpoints = (
     data.push(cidrNumberSection);
 
     return data;
+    return "";
   };
 
   return {

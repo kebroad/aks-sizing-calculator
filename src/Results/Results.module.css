@@ -12,6 +12,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: black;
+}
+
+a:link,
+a:hover,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+.download:hover,
+.download:active {
+  color: darkgray;
 }
 
 .downloadcard {

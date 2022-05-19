@@ -1,32 +1,46 @@
-.header{
-    position: fixed;
-    z-index: 100;
-    background-color: white;
-    padding: 2px;
-    width: 100%;
-    box-shadow: 0 2px 2px -2px rgb(0 0 0 / 76%);
+.header {
+  position: fixed;
+  z-index: 100;
+  background-color: white;
+  padding: 2px;
+  width: 100%;
+  box-shadow: 0 2px 2px -2px rgb(0 0 0 / 76%);
 }
 
-.navbar{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.logo { 
-    height: 2.5rem;
-    width: 2.5rem;
-    margin: 20px;
+.section1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
-.name{
-    font-size: 2.5rem;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    margin: 0px;
-    margin: 20px;
+.section2 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
-.github{
-    height: 2.5rem;
-    width: 2.5rem;
+.logo {
+  height: 2.5rem;
+  width: 2.5rem;
+  margin: 20px;
+}
+
+.name {
+  font-size: 2.5rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0px;
+  margin: 20px;
+}
+
+.github {
+  height: 2.5rem;
+  width: 2.5rem;
+  margin-left: 10px;
+  margin-right: 20px;
 }

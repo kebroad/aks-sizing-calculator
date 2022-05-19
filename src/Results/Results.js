@@ -33,8 +33,7 @@ const Results = (props) => {
           <h2 className={classes.label}>Subnet Size:</h2>
           <h2 className={classes.value}>/{props.cidrNumber}</h2>
         </div>
-        <CSVLink data={fetchCSV()}>
-          {" "}
+        <CSVLink data={fetchCSV()} filename="aks-sizing">
           <Card className={classes.downloadcard}>
             <div className={classes.download}>
               <FiDownload className={classes.downloadicon}></FiDownload>

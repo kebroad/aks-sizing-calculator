@@ -1,20 +1,28 @@
-import React from 'react'
-import { ReactComponent as AKSLogo } from '../images/aks.svg';
-import classes from "./Header.module.css"
-// import { AiFillGithub } from 'react-icons/ai';
+import React from "react";
+import { ReactComponent as AKSLogo } from "../images/aks.svg";
+import classes from "./Header.module.css";
+import Button from "./Button";
+import { AiFillGithub } from "react-icons/ai";
 const Header = () => {
-    return (<>
-        <header className={classes.header}>
-            <nav className={classes.navbar}>
-                <AKSLogo className={classes.logo}></AKSLogo>
-                <h1 className={classes.name}>AKS Sizing Calculator</h1>
-                {/* <AiFillGithub className={classes.github}></AiFillGithub> */}
-            </nav>
-            {/* <LineSegment></LineSegment> */}
-        </header>
+  return (
+    <>
+      <header className={classes.header}>
+        <nav className={classes.navbar}>
+          <div className={classes.section1}>
+            <AKSLogo className={classes.logo}></AKSLogo>
+            <h1 className={classes.name}>AKS Sizing Calculator</h1>
+          </div>
+          <Button>
+            <div className={classes.section2}>
+              <h2>View Source Code</h2>
+              <AiFillGithub className={classes.github}></AiFillGithub>
+            </div>
+          </Button>
+        </nav>
+        {/* <LineSegment></LineSegment> */}
+      </header>
+    </>
+  );
+};
 
-        </>
-    )
-}
-
-export default Header
+export default Header;
