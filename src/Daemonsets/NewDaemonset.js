@@ -7,12 +7,17 @@ import Button from "../UI/Button";
 
 const NewDaemonset = (props) => {
   const [name, setName] = useState();
+  const [type, setType] = useState();
   const onChangeName = (e) => {
     setName(e.target.value);
   };
+
+  const onChangeType = (e) => {
+    setType(e.target.value);
+  };
   const submitHandler = (e) => {
     e.preventDefault();
-    props.onClick({ name: name });
+    props.onClick({ name: name, type: type });
     setName("");
   };
   return (
@@ -28,8 +33,17 @@ const NewDaemonset = (props) => {
             onChange={onChangeName}
             value={name}
           ></input>
-          <select id="cars" name="cars">
-            <option value="system">system</option>
+          <select
+            id="type"
+            name="type"
+            placeholder="sf"
+            className={classes.type}
+            onChange={onChangeType}
+            value={type}
+          >
+            <option className={classes.type} value="system">
+              system
+            </option>
             <option value="user">user</option>
           </select>
           <Button className={classes.button}>

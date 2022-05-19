@@ -15,7 +15,7 @@ const NewEnvironment = (props) => {
   };
   const submitHandler = (e) => {
     e.preventDefault();
-    props.onClick({ name: name, replicas: replicas });
+    props.onClick({ name: name, replicas: parseInt(replicas) });
     setName("");
     setReplicas("");
   };

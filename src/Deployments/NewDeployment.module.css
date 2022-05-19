@@ -18,6 +18,12 @@ input {
   border: 0;
   /* box-shadow:0 0 15px 4px rgba(0,0,0,0.06); */
 }
+.type {
+  font-size: 1.5rem;
+  outline: none;
+  border: none;
+  width: 25%;
+}
 
 input:focus {
   outline: none;
@@ -28,9 +34,9 @@ input:focus {
 }
 
 .name {
-  width: 70%;
+  width: 50%;
 }
 
 .number {
-  width: 25%;
+  width: 20%;
 }

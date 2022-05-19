@@ -7,6 +7,10 @@ import Button from "../UI/Button";
 const NewDeployment = (props) => {
   const [name, setName] = useState();
   const [replicas, setReplicas] = useState();
+  const [type, setType] = useState("user");
+  const onChangeType = (e) => {
+    setType(e.target.value);
+  };
   const onChangeName = (e) => {
     setName(e.target.value);
   };
@@ -15,7 +19,12 @@ const NewDeployment = (props) => {
   };
   const submitHandler = (e) => {
     e.preventDefault();
-    props.onClick({ name: name, replicas: replicas });
+    props.onClick({
+      name: name,
+      type: type,
+      replicas: parseInt(replicas),
+    });
+
     setName("");
     setReplicas("");
   };
@@ -34,6 +43,19 @@ const NewDeployment = (props) => {
             name="name"
           ></input>
           <label hidden>name</label>
+          <select
+            id="type"
+            name="type"
+            placeholder="sf"
+            className={classes.type}
+            onChange={onChangeType}
+            value={type}
+          >
+            <option className={classes.type} value="system">
+              system
+            </option>
+            <option value="user">user</option>
+          </select>
           <input
             value={replicas}
             onChange={onChangeReplicas}

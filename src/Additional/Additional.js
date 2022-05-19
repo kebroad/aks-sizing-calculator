@@ -4,10 +4,6 @@ import classes from "./Additional.module.css";
 import { FiSquare } from "react-icons/fi";
 import Button from "../UI/Button";
 const Additional = (props) => {
-  const [ingressEndpoints, setIngressEndpoints] = useState(0);
-  const [systemPodsPerNode, setSystemPodsPerNode] = useState(30);
-  const [userPodsPerNode, setUserPodsPerNode] = useState(0);
-
   const kvIntegrationClasses = props.kvIntegration
     ? `${classes.checkmark} ${classes.checkmarkchecked}`
     : `${classes.checkmark}`;
@@ -44,7 +40,7 @@ const Additional = (props) => {
             <div className={classes.icon}>
               <FiSquare className={kvIntegrationClasses}></FiSquare>
             </div>
-            <h2>Key Vault CSI Integration Enabled</h2>
+            <h2>Key Vault CSI Integration</h2>
           </div>
         </Button>
         <Button className={classes.button} onClick={props.privateClusterToggle}>

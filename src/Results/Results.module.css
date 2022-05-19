@@ -15,11 +15,22 @@
 }
 
 .downloadcard {
-  background-color: #9466c2; 
+  /* background-color: #9466c2;  */
 }
 
 .downloadicon {
   width: 2rem;
   height: 2rem;
   margin: 4px;
+}
+
+.label {
+  width: 50%;
+  margin: 5px;
+}
+
+.value {
+  width: 20%;
+  text-align: center;
+  margin: 5px;
 }

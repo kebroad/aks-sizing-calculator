@@ -15,25 +15,25 @@ function App() {
     {
       name: "coredns",
       type: "system",
-      replicas: "2",
+      replicas: 2,
       id: 0.32974327,
     },
     {
       name: "coredns-autoscaler",
       type: "system",
-      replicas: "1",
+      replicas: 1,
       id: 0.398219545,
     },
     {
       name: "metrics-server",
       type: "system",
-      replicas: "1",
+      replicas: 1,
       id: 0.9082347,
     },
     {
       name: "tunnelfront",
       type: "system",
-      replicas: "1",
+      replicas: 1,
       id: 0.0237328,
     },
   ];
@@ -57,7 +57,7 @@ function App() {
   const initialEnvironments = [
     {
       name: "dev",
-      replicas: "1",
+      replicas: 1,
       id: 0.57283,
     },
   ];
@@ -79,6 +79,11 @@ function App() {
     ingressEndpoints,
     systemPodsPerNode,
     userPodsPerNode,
+    userNodes,
+    systemNodes,
+    totalIpsUsed,
+    totalIpsReserved,
+    cidrNumber,
     addDeploymentHandler,
     removeDeploymentHandler,
     addDaemonsetHandler,
@@ -92,6 +97,7 @@ function App() {
     onChangeIngressEndpoints,
     onChangeSystemPodsPerNode,
     onChangeUserPodsPerNode,
+    exportCSV,
   } = useEndpoints(
     initialDeployments,
     initialDaemonsets,
@@ -142,7 +148,14 @@ function App() {
             onChangeSystemPodsPerNode={onChangeSystemPodsPerNode}
             onChangeUserPodsPerNode={onChangeUserPodsPerNode}
           ></Additional>
-          <Results></Results>
+          <Results
+            userNodes={userNodes}
+            systemNodes={systemNodes}
+            totalIpsUsed={totalIpsUsed}
+            totalIpsReserved={totalIpsReserved}
+            cidrNumber={cidrNumber}
+            exportCSV={exportCSV}
+          ></Results>
         </Sidebar>
       </div>
     </>
