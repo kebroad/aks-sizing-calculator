@@ -4,7 +4,7 @@ import Card from "../UI/Card";
 import Section from "../UI/Section";
 import classes from "./Results.module.css";
 import { FiDownload } from "react-icons/fi";
-import { CSVDownload, CSVLink } from "react-csv";
+import { CSVLink } from "react-csv";
 const Results = (props) => {
   const fetchCSV = () => {
     const data = props.exportCSV();

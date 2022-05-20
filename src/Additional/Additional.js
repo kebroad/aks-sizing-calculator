@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import Section from "../UI/Section";
 import classes from "./Additional.module.css";
 import { FiSquare } from "react-icons/fi";

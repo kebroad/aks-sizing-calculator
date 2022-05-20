@@ -101,7 +101,7 @@ const useEndpoints = (
   const removeDeploymentHandler = (deployment) => {
     setDeployments((deployments) => {
       const newDeployments = deployments.filter(
-        (item) => item.id != deployment.id
+        (item) => item.id !== deployment.id
       );
       return newDeployments;
     });
@@ -123,7 +123,7 @@ const useEndpoints = (
   const removeDaemonsetHandler = (daemonset) => {
     setDaemonsets((daemonsets) => {
       const newDaemonsets = daemonsets.filter(
-        (item) => item.id != daemonset.id
+        (item) => item.id !== daemonset.id
       );
       return newDaemonsets;
     });
@@ -143,7 +143,7 @@ const useEndpoints = (
   const removeEnvironmentHandler = (environment) => {
     setEnvironments((environments) => {
       const newEnvironments = environments.filter(
-        (item) => item.id != environment.id
+        (item) => item.id !== environment.id
       );
       return newEnvironments;
     });

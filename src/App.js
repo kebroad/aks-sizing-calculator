@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import classes from "./App.module.css";
 import Header from "./UI/Header";
 import Main from "./UI/Main";

@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-import Card from "../UI/Card";
 import Section from "../UI/Section";
 import Deployment from "./Deployment";
 import classes from "./Deployments.module.css";

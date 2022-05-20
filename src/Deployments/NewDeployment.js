@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Card from "../UI/Card";
 import DashedCard from "../UI/DashedCard";
 import { FiPlusSquare } from "react-icons/fi";
 import classes from "./NewDeployment.module.css";
