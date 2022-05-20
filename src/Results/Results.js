@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "../UI/Button";
 import Card from "../UI/Card";
 import Section from "../UI/Section";
 import classes from "./Results.module.css";

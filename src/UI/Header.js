@@ -3,7 +3,6 @@ import { ReactComponent as AKSLogo } from "../images/aks.svg";
 import classes from "./Header.module.css";
 import Button from "./Button";
 import { AiFillGithub } from "react-icons/ai";
-import Link from "react-csv/lib/components/Link";
 const Header = () => {
   return (
     <>
@@ -15,7 +14,6 @@ const Header = () => {
           </div>
           <a href="https://github.com/kebroad/aks-sizing-calculator">
             <Button>
-              {/* <Link to="https://github.com/kebroad/aks-sizing-calculator"> */}
               <div className={classes.section2}>
                 <h2>View Source Code</h2>
                 <AiFillGithub className={classes.github}></AiFillGithub>
