@@ -372,7 +372,6 @@ const useEndpoints = (
     data.push(cidrNumberSection);
 
     return data;
-    return "";
   };
 
   return {
