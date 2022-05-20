@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/aks-sizing-calculator/static/css/main.7924be54.css",
-    "main.js": "/aks-sizing-calculator/static/js/main.86d13bf9.js",
+    "main.css": "/aks-sizing-calculator/static/css/main.bd655971.css",
+    "main.js": "/aks-sizing-calculator/static/js/main.8720c4b5.js",
     "static/js/787.e13f9cce.chunk.js": "/aks-sizing-calculator/static/js/787.e13f9cce.chunk.js",
     "static/media/aks.svg": "/aks-sizing-calculator/static/media/aks.19b9dc9fdd4e80fd67406c71c763e40e.svg",
     "index.html": "/aks-sizing-calculator/index.html",
-    "main.7924be54.css.map": "/aks-sizing-calculator/static/css/main.7924be54.css.map",
-    "main.86d13bf9.js.map": "/aks-sizing-calculator/static/js/main.86d13bf9.js.map",
+    "main.bd655971.css.map": "/aks-sizing-calculator/static/css/main.bd655971.css.map",
+    "main.8720c4b5.js.map": "/aks-sizing-calculator/static/js/main.8720c4b5.js.map",
     "787.e13f9cce.chunk.js.map": "/aks-sizing-calculator/static/js/787.e13f9cce.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7924be54.css",
-    "static/js/main.86d13bf9.js"
+    "static/css/main.bd655971.css",
+    "static/js/main.8720c4b5.js"
   ]
 }
