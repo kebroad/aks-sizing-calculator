@@ -13,14 +13,16 @@ const Header = () => {
             <AKSLogo className={classes.logo}></AKSLogo>
             <h1 className={classes.name}>AKS Sizing Calculator</h1>
           </div>
-          <Button>
-            <Link to="https://github.com/kebroad/aks-sizing-calculator">
+          <a href="https://github.com/kebroad/aks-sizing-calculator">
+            <Button>
+              {/* <Link to="https://github.com/kebroad/aks-sizing-calculator"> */}
               <div className={classes.section2}>
                 <h2>View Source Code</h2>
                 <AiFillGithub className={classes.github}></AiFillGithub>
               </div>
-            </Link>
-          </Button>
+              {/* </Link> */}
+            </Button>
+          </a>
         </nav>
         {/* <LineSegment></LineSegment> */}
       </header>

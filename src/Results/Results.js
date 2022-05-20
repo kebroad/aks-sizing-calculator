@@ -41,7 +41,6 @@ const Results = (props) => {
             </div>
           </Card>
         </CSVLink>
-        <Button></Button>
       </div>
     </Section>
   );

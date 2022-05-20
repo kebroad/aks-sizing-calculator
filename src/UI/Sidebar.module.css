@@ -1,6 +1,7 @@
 .sidebar {
   margin-top: 4rem;
   width: 30%;
-  height: 100%;
-  position: relative;
+  height: calc(100vh - 5rem);
+  /* position: relative; */
+  overflow-y: auto;
 }

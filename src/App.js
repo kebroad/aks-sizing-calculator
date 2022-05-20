@@ -8,6 +8,7 @@ import useEndpoints from "./hooks/useEndpoints";
 import Sidebar from "./UI/Sidebar";
 import Additional from "./Additional/Additional";
 import Results from "./Results/Results";
+import Footer from "./UI/Footer";
 
 function App() {
   const initialDeployments = [
@@ -157,6 +158,7 @@ function App() {
           ></Results>
         </Sidebar>
       </div>
+      <Footer></Footer>
     </>
   );
 }
