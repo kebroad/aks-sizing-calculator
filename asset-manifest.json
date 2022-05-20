@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/aks-sizing-calculator/static/css/main.a6fba57d.css",
+    "main.js": "/aks-sizing-calculator/static/js/main.36e9d372.js",
+    "static/js/787.e13f9cce.chunk.js": "/aks-sizing-calculator/static/js/787.e13f9cce.chunk.js",
+    "static/media/aks.svg": "/aks-sizing-calculator/static/media/aks.19b9dc9fdd4e80fd67406c71c763e40e.svg",
+    "index.html": "/aks-sizing-calculator/index.html",
+    "main.a6fba57d.css.map": "/aks-sizing-calculator/static/css/main.a6fba57d.css.map",
+    "main.36e9d372.js.map": "/aks-sizing-calculator/static/js/main.36e9d372.js.map",
+    "787.e13f9cce.chunk.js.map": "/aks-sizing-calculator/static/js/787.e13f9cce.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a6fba57d.css",
+    "static/js/main.36e9d372.js"
+  ]
+}
